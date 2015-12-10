@@ -1,0 +1,14 @@
+/**
+ * Believe it or not, i am really going to comment the css file!
+ * A serious dev note - one css file, all styles are controlled
+ * using class toggling via JS or PHP.
+ */
+
+/** So first we begin with derping around with the admin dashboard position: */
+#wpcontent {
+	transform: rotate(180deg);
+}
+
+#adminmenuback {
+	transform: scale(-1, 1);
+}
