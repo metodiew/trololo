@@ -72,4 +72,8 @@
 
 #adminmenuback {
 	transform: scale(-1, 1);
+}
+
+#adminmenu li.menu-top {
+	transform: rotate(180deg);
 }*/
