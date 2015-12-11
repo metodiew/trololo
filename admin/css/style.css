@@ -4,11 +4,72 @@
  * using class toggling via JS or PHP.
  */
 
+/** Lets kick off with trollface for the options page */
+#adminmenu .toplevel_page_trololo {
+	box-shadow: 0 0 5px pink;
+
+	background: linear-gradient(270deg, #0011ff, #ff0000);
+	background-size: 400% 400%;
+
+	-webkit-animation: gradientAnimation 5s ease infinite;
+	-moz-animation: gradientAnimation 5s ease infinite;
+	animation: gradientAnimation 5s ease infinite;
+}
+
+#adminmenu .toplevel_page_trololo:hover {
+	box-shadow: 0 0 15px yellow;
+}
+
+#adminmenu .toplevel_page_trololo:after {
+	content: ' ';
+	background: url(../images/icon_sparkling_arrow.gif);
+	height: 52px;
+	width: 75px;
+	display: block;
+	position: absolute;
+	right: -75px;
+	top: -7px;
+	animation: notObviousArrowAnimation 1s ease infinite;
+}
+
+#adminmenu .toplevel_page_trololo .wp-menu-name {
+	font-weight: bold;
+}
+
+#adminmenu .toplevel_page_trololo .wp-menu-image {
+	background: white;
+	margin-right: 5px;
+
+	background: linear-gradient(270deg, #ffff00, #ff0000);
+	background-size: 400% 400%;
+
+	animation: gradientAnimation 5s ease infinite;
+}
+
+#adminmenu .toplevel_page_trololo .wp-menu-image img {
+	margin-top: -4px;
+	height: 25px;
+	width: 25px;
+}
+
+/** I am really trying way too hard... */
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+@keyframes notObviousArrowAnimation {
+    0% { transform: translateX(-10px) rotate(180deg); }
+    100% { transform: translateX(0) rotate(180deg); }
+}
+
 /** So first we begin with derping around with the admin dashboard position: */
-#wpcontent {
+/*#wpcontent {
 	transform: rotate(180deg);
 }
 
 #adminmenuback {
 	transform: scale(-1, 1);
-}
+}*/

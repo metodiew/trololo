@@ -35,9 +35,13 @@ class Trololo_Admin {
 	}
 
 	// Boring plugin stuff from now on:
+	// Otherways put - add actions and filters.
 	public function run() {
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_styles' ) );
+
+		// The options page.
+		add_action( 'admin_menu', array( $this, 'awesome_options' ) );
 	}
 
 	private function get_plugin_name() {
@@ -46,5 +50,11 @@ class Trololo_Admin {
 
 	private function get_version() {
 		return $this->version;
+	}
+
+	public function awesome_options() {
+
+		// The best options page ever created in the history of WordPress. Totally
+		add_menu_page( 'Do not click here', 'Don\'t click here!', 'administrator', 'trololo', 'awesome_options' , plugins_url( 'images/icon_trollface.png', __FILE__ ) );
 	}
 }
